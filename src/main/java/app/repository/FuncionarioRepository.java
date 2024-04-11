@@ -1,5 +1,13 @@
 package app.repository;
 
-public class FuncionarioRepository {
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import app.entity.Funcionario;
+
+public interface FuncionarioRepository extends JpaRepository<Funcionario, Long>{
+	
+	public List<Funcionario> findByName(String nome);
 
 }
