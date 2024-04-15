@@ -15,7 +15,8 @@ public class FormaPagamentoService {
 	@Autowired
 	private FormaPagamentoRepository formaPagamentoRepository;
 
-
+	
+	
 	public String save(FormaPagamento formaPagamento) {
 		this.formaPagamentoRepository.save(formaPagamento);
 		return "Forma de Pagamento Salva com Sucesso";

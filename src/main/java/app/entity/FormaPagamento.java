@@ -26,7 +26,6 @@ public class FormaPagamento {
 	private List<Pagamento> pagamentos;
 
 
-
 	public long getIdFormaPagto() {
 		return idFormaPagto;
 	}

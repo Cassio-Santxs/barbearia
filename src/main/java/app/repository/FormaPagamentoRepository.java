@@ -12,8 +12,6 @@ public interface FormaPagamentoRepository extends JpaRepository<FormaPagamento ,
 	public List<FormaPagamento> findByNome(String nmFormaPagto);
 
 
-
-
 }
 
 
