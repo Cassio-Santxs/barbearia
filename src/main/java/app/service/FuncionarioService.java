@@ -28,4 +28,24 @@ public class FuncionarioService {
 		
 		return this.repository.findAll();
 	}
+	public String deleteById(long idFuncionario) {
+		
+		this.repository.deleteById(idFuncionario);
+		return ("Deletado com sucesso!");
+		
+	}
+	public String update(Funcionario funcionario, long idFuncionario) {
+		
+		funcionario.setIdFuncionario(idFuncionario);
+		this.repository.save(funcionario);
+		return("Atualizado com sucesso!");
+	}
+	public Funcionario findById(long idFuncionario) {
+		
+		Funcionario funcionario = this.repository.findById(idFuncionario).get();
+		return funcionario;
+	}
+	public List<Funcionario> findByNmFuncionario(String nmFuncionario){
+		return this.findByNmFuncionario(nmFuncionario);
+	}
 }

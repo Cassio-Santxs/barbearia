@@ -8,6 +8,6 @@ import app.entity.Funcionario;
 
 public interface FuncionarioRepository extends JpaRepository<Funcionario, Long>{
 	
-	public List<Funcionario> findByName(String nome);
+	public List<Funcionario> findByNmFuncionario(String nome);
 
 }
