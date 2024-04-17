@@ -22,7 +22,7 @@ import app.service.FormaPagamentoService;
 @RequestMapping("/api/formaPagamento")
 public class FormaPagamentoController {
 
-	
+
 	@Autowired
 	private FormaPagamentoService formaPagamentoService;
 
@@ -87,9 +87,9 @@ public class FormaPagamentoController {
 
 
 	@GetMapping("/findByNome")
-	public ResponseEntity<List<FormaPagamento>> findByNome(@RequestParam String nmFormaPagto) {
+	public ResponseEntity<List<FormaPagamento>> findByNmFormaPagto(@RequestParam String nmFormaPagto) {
 		try {
-			List<FormaPagamento> formaPagamento = this.formaPagamentoService.findByNome(nmFormaPagto);
+			List<FormaPagamento> formaPagamento = this.formaPagamentoService.findByNmFormaPagto(nmFormaPagto);
 			return ResponseEntity.ok(formaPagamento);
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);

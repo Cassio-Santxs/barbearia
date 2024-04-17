@@ -15,8 +15,8 @@ public class FormaPagamentoService {
 	@Autowired
 	private FormaPagamentoRepository formaPagamentoRepository;
 
-	
-	
+
+
 	public String save(FormaPagamento formaPagamento) {
 		this.formaPagamentoRepository.save(formaPagamento);
 		return "Forma de Pagamento Salva com Sucesso";
@@ -51,8 +51,8 @@ public class FormaPagamentoService {
 	}
 
 
-	public List<FormaPagamento> findByNome(String nmFormaPagto){
-		return this.formaPagamentoRepository.findByNome(nmFormaPagto);
+	public List<FormaPagamento> findByNmFormaPagto(String nmFormaPagto){
+		return this.formaPagamentoRepository.findByNmFormaPagto(nmFormaPagto);
 	}
 
 

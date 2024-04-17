@@ -9,7 +9,7 @@ import app.entity.FormaPagamento;
 public interface FormaPagamentoRepository extends JpaRepository<FormaPagamento , Long> {
 
 
-	public List<FormaPagamento> findByNome(String nmFormaPagto);
+	public List<FormaPagamento> findByNmFormaPagto(String nmFormaPagto);
 
 
 }
